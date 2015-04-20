@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1 Run CMULib
+  div
+    form(action='/setconf',method='post')
+      div(data-role='fieldcontain')
+        fieldset(data-role='controlgroup')
+          label(for='masterAddress') masterAddress
+            input(id='masterAddress',type='text',value='',placeholder='',name='masterAddress')
+      div#masterPort(data-role='fieldcontain')
+        fieldset(data-role='controlgroup')
+          label(for='masterPort') masterPort
+            input(id='masterPort',type='text',value='',placeholder='',name='masterPort')
+      div#minSlaveNum(data-role='fieldcontain')
+        fieldset(data-role='controlgroup')
+          label(for='minSlaveNum') minSlaveNum
+            input(id='minSlaveNum',type='text',value='',placeholder='',name='minSlaveNum')
+      div(data-role='fieldcontain')
+        input(type='submit',value='Sign Up',data-transition='fade',data-theme='c')
+
